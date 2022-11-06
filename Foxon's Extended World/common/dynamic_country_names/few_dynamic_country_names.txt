@@ -1,0 +1,531 @@
+﻿SER = { #Serbia
+	dynamic_country_name = {
+		name = dyn_c_serbia_tsarsdom
+		adjective = dyn_c_serbia_tsarsdom_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = c:RUS
+			c:SER = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_serbia_kingdom
+		adjective = dyn_c_serbia_kingdom_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:SER 
+			c:SER = {
+				owns_entire_state_region = STATE_SOUTHERN_SERBIA
+				owns_entire_state_region = STATE_NORTHERN_SERBIA
+				owns_entire_state_region = STATE_VOEVODINA
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_serbia_principality
+		adjective = dyn_c_serbia_principality_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:SER 
+			c:SER = {
+				owns_entire_state_region = STATE_SOUTHERN_SERBIA
+				owns_entire_state_region = STATE_NORTHERN_SERBIA
+				owns_entire_state_region = STATE_VOEVODINA
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_serbia_republic
+		adjective = dyn_c_serbia_republic_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:SER
+			c:SER = {
+				few_republic_trigger = yes
+			}
+		}
+	}
+}
+
+POL = { #Poland
+	dynamic_country_name = {
+		name = dyn_c_poland_tsarsdom
+		adjective = dyn_c_poland_tsarsdom_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			exists = c:RUS
+			scope:actor = {
+				is_subject_of = c:RUS
+			}
+		}
+	}
+}
+
+WSL = { # West Slavia
+ 	dynamic_country_name = {
+		name = dyn_c_west_slavia
+		adjective = dyn_c_west_slavia_adj
+
+		is_main_tag_only = yes
+		priority = 0
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_west_slavia_monarchy
+		adjective = dyn_c_west_slavia_monarchy_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:WSL
+			c:WSL = { 
+					few_monarchy_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+BLK = { # West Slavia
+ 	dynamic_country_name = {
+		name = dyn_c_balkan
+		adjective = dyn_c_balkan_adj
+
+		is_main_tag_only = yes
+		priority = 0
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_balkan_monarchy
+		adjective = dyn_c_balkan_monarchy_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:BLK
+			c:BLK = { 
+					few_monarchy_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+UMW = {
+	dynamic_country_name = {
+		name = dyn_c_union_of_mol_wal
+		adjective = dyn_c_union_of_mol_wal_adj
+
+		is_main_tag_only = yes
+		priority = 0
+	}
+
+	dynamic_country_name = {# не работает
+		name = dyn_c_union_of_mol_wal_monarchy
+		adjective = dyn_c_union_of_mol_wal_monarchy_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:UMW
+			c:UMW = { 
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {# не работает
+		name = dyn_c_union_of_mol_wal_republic
+		adjective = dyn_c_union_of_mol_wal_republic_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:UMW
+			c:UMW = {
+				few_republic_trigger = yes
+			}
+		}
+	}
+}
+
+SLA = {
+	dynamic_country_name = {
+		name = dyn_c_slavia
+		adjective = dyn_c_west_slavia_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_slavia_monarchy
+		adjective = dyn_c_west_slavia_monarchy_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:SLA
+			c:SLA = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_slavia_republic
+		adjective = dyn_c_west_slavia_republic_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:SLA
+			c:SLA = {
+				few_republic_trigger = yes
+			}
+		}
+	}
+}
+
+RUS = {
+	dynamic_country_name = {
+		name = dyn_c_russian_empire
+		adjective = dyn_c_russian_empire_adj
+		
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:RUS
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_russian_federation
+		adjective = dyn_c_russian_federation_adj
+		
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			exists = c:RUS
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+EST = {
+	dynamic_country_name = {
+		name = dyn_c_EST_RUS
+		adjective = dyn_c_EST_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:EST = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+LAT = {
+	dynamic_country_name = {
+		name = dyn_c_LAT_RUS
+		adjective = dyn_c_LAT_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:LAT = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+LIT = {
+	dynamic_country_name = {
+		name = dyn_c_LIT_RUS
+		adjective = dyn_c_LIT_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:LIT = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+UKR = {
+	dynamic_country_name = {
+		name = dyn_c_UKR_RUS
+		adjective = dyn_c_UKR_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:UKR = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+BYE = {
+	dynamic_country_name = {
+		name = dyn_c_BYE_RUS
+		adjective = dyn_c_BYE_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:BYE = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+UBD = {
+	dynamic_country_name = {
+		name = dyn_c_UBD_RUS
+		adjective = dyn_c_UBD_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:UBD = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+GEO = {
+	dynamic_country_name = {
+		name = dyn_c_GEO_RUS
+		adjective = dyn_c_GEO_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:GEO = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+ARM = {
+	dynamic_country_name = {
+		name = dyn_c_ARM_RUS
+		adjective = dyn_c_ARM_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:ARM = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+CRI = {
+	dynamic_country_name = {
+		name = dyn_c_CRI_RUS
+		adjective = dyn_c_CRI_RUS_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:RUS
+			c:CRI = {
+				is_subject_of = c:RUS
+				few_monarchy_trigger = yes
+			}
+			c:RUS = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+}
+
+UGE = {
+	dynamic_country_name = {
+		name = dyn_c_UGE
+		adjective = dyn_c_UGE_adj
+		
+		is_main_tag_only = yes
+		priority = 1
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_UGE_monarchy
+		adjective = dyn_c_UGE_monarchy_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:UGE
+			c:UGE = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_UGE_republic
+		adjective = dyn_c_UGE_republic_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:UGE
+			c:UGE = {
+				few_republic_trigger = yes
+			}
+		}
+	}
+}
+
+KEL = {
+	dynamic_country_name = {
+		name = dyn_c_KEL
+		adjective = dyn_c_KEL_adj
+		
+		is_main_tag_only = yes
+		priority = 1
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_KEL_monarchy
+		adjective = dyn_c_KEL_monarchy_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:KEL
+			c:KEL = {
+				few_monarchy_trigger = yes
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_KEL_republic
+		adjective = dyn_c_KEL_republic_adj
+		
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:KEL
+			c:KEL = {
+				few_republic_trigger = yes
+			}
+		}
+	}
+}
+
+NMW = {
+	dynamic_country_name = {
+		name = dyn_c_NMW
+		adjective dyn_c_NMW_adj
+
+		is_main_tag_only = yes
+		priority = 1
+	}
+}

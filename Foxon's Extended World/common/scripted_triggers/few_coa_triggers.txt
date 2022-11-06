@@ -1,0 +1,115 @@
+﻿### Режимы
+#Монархия
+few_monarchy_trigger = {
+	OR = {
+		has_law = law_type:law_chiefdom
+		has_law = law_type:law_monarchy
+	}
+}
+
+#Президентская республика
+few_presidential_republic_trigger = {
+		has_law = law_type:law_presidential_republic
+}
+
+#Парламентская республика
+few_parliamentary_republicm_trigger = {
+		has_law = law_type:law_parliamentary_republic
+}
+
+#Советская республика
+few_council_republic_trigger = {
+		has_law = law_type:law_council_republic
+}
+
+#Республика
+few_republic_trigger = {
+	OR = {
+		has_law = law_type:law_presidential_republic
+		has_law = law_type:law_parliamentary_republic
+	}
+}
+
+#Теократия
+few_theocracy_trigger = {
+		has_law = law_type:law_theocracy
+}
+
+#Племя
+few_chiefdom_trigger = {
+		has_law = law_type:law_chiefdom
+}
+
+###Правитель
+
+#Автократ
+few_autocracy_trigger = {
+	has_law = law_type:law_autocracy 
+}
+
+# Анархия
+few_anarchy_trigger = {
+	has_law = law_type:law_anarchy
+}
+
+#Выборы
+few_voting_trigger = {
+    OR = {
+        has_law = law_type:law_census_voting #имущество
+        has_law = law_type:law_landed_voting #земля
+        has_law = law_type:law_wealth_voting #состояние
+        has_law = law_type:law_universal_suffrage #без ограничений
+    }
+}
+
+#Олигархия
+few_oligarchy_trigger = {
+    has_law = law_type:law_oligarchy
+}
+
+###Уникальные сочетания
+#Абсолютная монархия
+few_absolute_monarchy_trigger = {
+	few_monarchy_trigger = yes
+	few_autocracy_trigger = yes
+}
+
+#Демократическая монархия
+few_democratic_monarchy_trigger = {
+    few_monarchy_trigger = yes
+    few_voting_trigger = yes
+}
+
+#Аристократическая монархия
+few_oligarchy_monarchy_trigger = {
+    few_monarchy_trigger = yes
+    few_oligarchy_trigger = yes
+}
+
+#Недемократическая монархия
+coa_undemocratic_monarchy_trigger = {
+	few_monarchy_trigger = yes
+	OR = {
+		has_law = law_type:law_autocracy 
+		has_law = law_type:law_elder_council
+		has_law = law_type:law_oligarchy
+	}
+}
+
+#Диктатура
+few_dictatorship_trigger = {
+	few_republic_trigger = yes
+	few_autocracy_trigger = yes
+}
+
+#Олигархия
+few_oligarchy_trigger = {
+	few_republic_trigger = yes
+	few_oligarchy_trigger = yes
+}
+
+#Демократическая республика
+few_republic_voting_trigger = {
+    few_republic_trigger = yes
+    few_voting_trigger = yes
+}
